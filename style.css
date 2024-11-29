@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.stopwatch-container {
+    text-align: center;
+    background: radial-gradient(circle, #ddd 20%, #bbb 80%);
+    background-image: url('watch-face.png'); /* Replace with an actual watch image URL if available */
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 50%; /* Makes the container circular */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    height: 320px;
+    position: relative;
+}
+
+h1 {
+    margin: 0 0 20px;
+    color: #333;
+}
+
+.display {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.controls button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+#start-btn {
+    background: #28a745;
+    color: white;
+}
+
+#pause-btn {
+    background: #ffc107;
+    color: white;
+}
+
+#reset-btn {
+    background: #dc3545;
+    color: white;
+}
+
+#lap-btn {
+    background: #007bff;
+    color: white;
+}
+
+.controls button:hover {
+    opacity: 0.8;
+}
+
+.laps {
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+    padding-top: 10px;
+    color: #333;
+}
+
+.laps div {
+    font-size: 1rem;
+    margin: 5px 0;
+    padding: 5px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
